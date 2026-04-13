@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bevan Cloud — Product Workspaces</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --gray-1: #f5f5f3;
+    --gray-2: #e8e8e4;
+    --gray-3: #b0b0a8;
+    --black:  #1a1a18;
+    --radius: 16px;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--gray-1);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+  }
+
+  .wordmark {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--gray-3);
+    margin-bottom: 12px;
+  }
+
+  h1 {
+    font-size: clamp(26px, 4vw, 38px);
+    font-weight: 700;
+    color: var(--black);
+    letter-spacing: -.02em;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .sub {
+    font-size: 15px;
+    color: var(--gray-3);
+    margin-bottom: 52px;
+    text-align: center;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+  }
+
+  @media (max-width: 680px) {
+    .grid { grid-template-columns: 1fr; max-width: 420px; }
+  }
+
+  .card {
+    background: #fff;
+    border-radius: var(--radius);
+    border: 1px solid var(--gray-2);
+    padding: 32px 28px 28px;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: transform .15s, box-shadow .15s, border-color .15s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(0,0,0,.09);
+    border-color: transparent;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--accent);
+    opacity: 0;
+    transition: opacity .15s;
+  }
+
+  .card:hover::before { opacity: 1; }
+
+  /* Per-company accents */
+  .card-ph  { --accent: #2e7d32; }
+  .card-uc  { --accent: #e8a000; }
+  .card-ftn { --accent: #2e6b3e; }
+
+  .card-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+
+  .card-ph  .card-logo { background: #e8f5e9; }
+  .card-uc  .card-logo { background: #fff8e1; }
+  .card-ftn .card-logo { background: #e8f5e9; }
+
+  .card-name {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--black);
+    letter-spacing: -.01em;
+  }
+
+  .card-desc {
+    font-size: 13px;
+    color: var(--gray-3);
+    line-height: 1.5;
+    flex: 1;
+  }
+
+  .card-arrow {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  .card-arrow svg { transition: transform .15s; }
+  .card:hover .card-arrow svg { transform: translateX(3px); }
+
+  footer {
+    margin-top: 56px;
+    font-size: 12px;
+    color: var(--gray-3);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<p class="wordmark">Bevan Cloud</p>
+<h1>Product Workspaces</h1>
+<p class="sub">Strategy, prioritization &amp; roadmaps — one place per brand.</p>
+
+<div class="grid">
+
+  <a class="card card-ph" href="https://bevan-cloud.github.io/petheaven-prototype/home/">
+    <div class="card-logo">🐾</div>
+    <div class="card-name">Pet Heaven</div>
+    <div class="card-desc">South Africa's online pet store — subscriptions, personalisation &amp; catalogue growth.</div>
+    <div class="card-arrow">
+      Open workspace
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </a>
+
+  <a class="card card-uc" href="https://bevan-cloud.github.io/petheaven-prototype/ucook/home/">
+    <div class="card-logo">🍳</div>
+    <div class="card-name">UCook</div>
+    <div class="card-desc">SA's leading meal kit — ecommerce growth, fulfilment ops &amp; web/app enhancement.</div>
+    <div class="card-arrow">
+      Open workspace
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </a>
+
+  <a class="card card-ftn" href="https://bevan-cloud.github.io/petheaven-prototype/faithful-to-nature/home/">
+    <div class="card-logo">🌿</div>
+    <div class="card-name">Faithful to Nature</div>
+    <div class="card-desc">Natural &amp; organic marketplace — content, discovery, loyalty &amp; sustainable growth.</div>
+    <div class="card-arrow">
+      Open workspace
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </a>
+
+</div>
+
+<footer>bevan-cloud.github.io · Product strategy workspace</footer>
+
+</body>
+</html>
