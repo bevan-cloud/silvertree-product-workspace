@@ -114,8 +114,8 @@
   }
 
   .card-ph  .card-logo { background: #1b4d1e; padding: 10px 14px; }
-  .card-uc  .card-logo { background: #1a1a18; padding: 0 14px; }
-  .card-ftn .card-logo { background: #1e3d28; padding: 0 14px; }
+  .card-uc  .card-logo { background: #fff; border: 1px solid var(--gray-2); padding: 0 14px; }
+  .card-ftn .card-logo { background: #fff; border: 1px solid var(--gray-2); padding: 0 14px; }
 
   .card-logo img {
     height: 28px;
@@ -125,15 +125,18 @@
   }
 
   .card-logo-wordmark {
-    font-size: 18px;
-    font-weight: 800;
-    letter-spacing: -.02em;
-    color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: -.03em;
+    color: #1a1a18;
     white-space: nowrap;
   }
 
-  .card-uc .card-logo-wordmark  { color: #f5b800; }
-  .card-ftn .card-logo-wordmark { color: #7ecb8f; }
+  /* UCook: U in black, Cook in black — clean B&W */
+  .card-uc .card-logo-wordmark { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+
+  /* FtN: mixed case per brand */
+  .card-ftn .card-logo-wordmark { letter-spacing: -.02em; }
 
   .card-name {
     font-size: 17px;
@@ -205,7 +208,7 @@
   </a>
 
   <a class="card card-ftn" href="https://bevan-cloud.github.io/petheaven-prototype/faithful-to-nature/home/">
-    <div class="card-logo"><span class="card-logo-wordmark">ftn.</span></div>
+    <div class="card-logo"><span class="card-logo-wordmark">FtN</span></div>
     <div class="card-name">Faithful to Nature</div>
     <div class="card-desc">Natural &amp; organic marketplace — content, discovery, loyalty &amp; sustainable growth.</div>
     <div class="card-arrow">
