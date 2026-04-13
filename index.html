@@ -102,19 +102,38 @@
   .card-ftn { --accent: #2e6b3e; }
 
   .card-logo {
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
+    height: 52px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 22px;
     flex-shrink: 0;
+    padding: 0 14px;
+    width: fit-content;
+    max-width: 160px;
   }
 
-  .card-ph  .card-logo { background: #e8f5e9; }
-  .card-uc  .card-logo { background: #fff8e1; }
-  .card-ftn .card-logo { background: #e8f5e9; }
+  .card-ph  .card-logo { background: #1b4d1e; padding: 10px 14px; }
+  .card-uc  .card-logo { background: #1a1a18; padding: 0 14px; }
+  .card-ftn .card-logo { background: #1e3d28; padding: 0 14px; }
+
+  .card-logo img {
+    height: 28px;
+    width: auto;
+    display: block;
+    filter: brightness(0) invert(1);
+  }
+
+  .card-logo-wordmark {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: -.02em;
+    color: #fff;
+    white-space: nowrap;
+  }
+
+  .card-uc .card-logo-wordmark  { color: #f5b800; }
+  .card-ftn .card-logo-wordmark { color: #7ecb8f; }
 
   .card-name {
     font-size: 17px;
@@ -162,7 +181,7 @@
 <div class="grid">
 
   <a class="card card-ph" href="https://bevan-cloud.github.io/petheaven-prototype/home/">
-    <div class="card-logo">🐾</div>
+    <div class="card-logo"><img src="https://www.petheaven.co.za/skin/frontend/petheaven/default/images/logo-small.png" alt="Pet Heaven"></div>
     <div class="card-name">Pet Heaven</div>
     <div class="card-desc">South Africa's online pet store — subscriptions, personalisation &amp; catalogue growth.</div>
     <div class="card-arrow">
@@ -174,7 +193,7 @@
   </a>
 
   <a class="card card-uc" href="https://bevan-cloud.github.io/petheaven-prototype/ucook/home/">
-    <div class="card-logo">🍳</div>
+    <div class="card-logo"><span class="card-logo-wordmark">UCook</span></div>
     <div class="card-name">UCook</div>
     <div class="card-desc">SA's leading meal kit — ecommerce growth, fulfilment ops &amp; web/app enhancement.</div>
     <div class="card-arrow">
@@ -186,7 +205,7 @@
   </a>
 
   <a class="card card-ftn" href="https://bevan-cloud.github.io/petheaven-prototype/faithful-to-nature/home/">
-    <div class="card-logo">🌿</div>
+    <div class="card-logo"><span class="card-logo-wordmark">ftn.</span></div>
     <div class="card-name">Faithful to Nature</div>
     <div class="card-desc">Natural &amp; organic marketplace — content, discovery, loyalty &amp; sustainable growth.</div>
     <div class="card-arrow">
