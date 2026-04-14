@@ -53,13 +53,17 @@
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     width: 100%;
-    max-width: 900px;
+    max-width: 1160px;
   }
 
-  @media (max-width: 680px) {
+  @media (max-width: 900px) {
+    .grid { grid-template-columns: repeat(2, 1fr); max-width: 600px; }
+  }
+
+  @media (max-width: 520px) {
     .grid { grid-template-columns: 1fr; max-width: 420px; }
   }
 
@@ -97,9 +101,10 @@
   .card:hover::before { opacity: 1; }
 
   /* Per-company accents */
-  .card-ph  { --accent: #2e7d32; }
-  .card-uc  { --accent: #e8a000; }
-  .card-ftn { --accent: #2e6b3e; }
+  .card-ph      { --accent: #2e7d32; }
+  .card-uc      { --accent: #e8a000; }
+  .card-ftn     { --accent: #2e6b3e; }
+  .card-staging { --accent: #4f46e5; }
 
   .card-logo {
     height: 52px;
@@ -113,9 +118,10 @@
     max-width: 160px;
   }
 
-  .card-ph  .card-logo { background: #1b4d1e; padding: 10px 14px; }
-  .card-uc  .card-logo { background: #fff; border: 1px solid var(--gray-2); padding: 0 14px; }
-  .card-ftn .card-logo { background: #fff; border: 1px solid var(--gray-2); padding: 0 14px; }
+  .card-ph      .card-logo { background: #1b4d1e; padding: 10px 14px; }
+  .card-uc      .card-logo { background: #fff; border: 1px solid var(--gray-2); padding: 0 14px; }
+  .card-ftn     .card-logo { background: #fff; border: 1px solid var(--gray-2); padding: 0 14px; }
+  .card-staging .card-logo { background: #eef2ff; border: 1px solid #c7d2fe; padding: 0 14px; }
 
   .card-logo img {
     height: 28px;
@@ -211,6 +217,21 @@
     <div class="card-logo"><span class="card-logo-wordmark">FtN</span></div>
     <div class="card-name">Faithful to Nature</div>
     <div class="card-desc">Natural &amp; organic marketplace — content, discovery, loyalty &amp; sustainable growth.</div>
+    <div class="card-arrow">
+      Open workspace
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </a>
+
+  <a class="card card-staging" href="https://bevan-cloud.github.io/petheaven-prototype/staging/home/">
+    <div class="card-logo" style="background:#eef2ff;border:1px solid #c7d2fe;gap:6px">
+      <span style="font-size:14px">🧪</span>
+      <span class="card-logo-wordmark" style="color:#3730a3;font-size:16px">Staging</span>
+    </div>
+    <div class="card-name">Bevan Staging</div>
+    <div class="card-desc">Safe sandbox — build &amp; test new features here before rolling out to production brands.</div>
     <div class="card-arrow">
       Open workspace
       <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
